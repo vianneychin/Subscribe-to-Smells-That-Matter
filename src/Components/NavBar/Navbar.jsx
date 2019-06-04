@@ -1,15 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Nav } from './NavBarStyles'
+import { NavLink } from 'react-router-dom'
+import { Nav } from './styledNavBar'
 
 const NavBar = () => {
   return (
     <Nav>
-      <Link>About</Link>
-      <Link>Sign in</Link>
-      <Link>Register</Link>
-      <Link to="/cart">Cart</Link>
-      <Link to="/store">Shop</Link>
+      <NavLink>About</NavLink>
+      <NavLink activeStyle={{color: 'grey'}}>
+        Sign in
+      </NavLink>
+      <NavLink activeStyle={{color: 'grey'}}>
+        Register
+      </NavLink>
+      <h1>
+        the only subscription you'll ever need.
+      </h1>
+      <NavLink activeStyle={{color: 'black'}} to="/cart">
+        Cart
+      </NavLink>
+      <NavLink activeStyle={{color: 'black'}} to="/store">
+        Shop
+      </NavLink>
     </Nav>
   )
 }
