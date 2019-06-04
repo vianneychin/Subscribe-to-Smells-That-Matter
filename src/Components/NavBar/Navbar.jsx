@@ -5,10 +5,14 @@ import { Nav } from './styledNavBar'
 const NavBar = () => {
   return (
     <Nav>
-      <NavLink exact to="/" activeStyle={{color: 'grey'}}>Home</NavLink>
-      <NavLink to="/about" activeStyle={{color: 'grey'}}>About</NavLink>
       <NavLink to="/register" activeStyle={{color: 'grey'}}>
         Register
+      </NavLink>
+      <NavLink to="/about" activeStyle={{color: 'grey'}}>
+        About
+      </NavLink>
+      <NavLink exact to="/" activeStyle={{color: 'grey'}}>
+        Home
       </NavLink>
       <h1>
         the only subscription you'll ever need.

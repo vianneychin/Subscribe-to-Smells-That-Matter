@@ -1,8 +1,19 @@
 import React from 'react'
+import { StyledHome } from './styledHome'
 
 const Home = () => {
   return (
-    <div>this is the home</div>
+    <StyledHome>
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+      <div>
+        
+      </div>
+    </StyledHome>
   )
 }
 
