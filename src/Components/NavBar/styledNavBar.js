@@ -26,14 +26,16 @@ export const Nav = styled.nav`
     color: black;
   }
   @media (max-width: 640px) {
+    width: 100%;
+    /* position: fixed; */
     flex-direction: column;
     justify-content: center;
-    height: 30vh;
+    height: auto;
     h1 {
       display: none;
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     h1 {
       display: none;
     }

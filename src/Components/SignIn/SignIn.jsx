@@ -1,8 +1,25 @@
 import React from 'react'
+import { StyledSignIn } from './styledSignIn'
 
 const SignIn = () => {
   return (
-    <h1>SIGN IN HERE</h1>
+    <StyledSignIn>
+      <div>
+        <div>
+          <h1>Sign in</h1>
+          <h3>
+          Don't have an account? Create one here.
+          </h3>
+        </div>
+      </div>
+      <form>
+        <label>Username</label>
+        <input placeholder="Username" type="text" />
+        <label>Password</label>
+        <input placeholder="Password" type="password" />
+        <button>Sign in</button>
+      </form>
+    </StyledSignIn>
   )
 }
 
