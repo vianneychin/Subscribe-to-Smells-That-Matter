@@ -11,7 +11,7 @@ const Home = () => {
 
       </div>
       <div>
-        
+
       </div>
     </StyledHome>
   )
