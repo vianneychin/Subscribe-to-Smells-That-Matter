@@ -6,14 +6,14 @@ const NavBar = () => {
   return (
     <Nav>
       <NavLink exact to="/" activeStyle={{color: 'grey'}}>Home</NavLink>
-      <NavLink activeStyle={{color: 'grey'}}>About</NavLink>
-      <NavLink activeStyle={{color: 'grey'}}>
+      <NavLink to="/about" activeStyle={{color: 'grey'}}>About</NavLink>
+      <NavLink to="/register" activeStyle={{color: 'grey'}}>
         Register
       </NavLink>
       <h1>
         the only subscription you'll ever need.
       </h1>
-      <NavLink activeStyle={{color: 'grey'}}>
+      <NavLink to="/login" activeStyle={{color: 'grey'}}>
         Sign in
       </NavLink>
       <NavLink to="/cart" activeStyle={{color: 'grey'}}>
