@@ -19,6 +19,12 @@ export const Nav = styled.nav`
   a {
     margin: 20px;
   }
+  a:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    cursor: pointer;
+  }
   a:visited {
     color: white;
   }
