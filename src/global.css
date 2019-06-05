@@ -10,12 +10,13 @@ a, a:visited {
   text-decoration: none;
   color: white;
 }
-a:focus {
+a:hover {
   cursor: pointer;
 }
-button:focus {
+button:hover {
+  button: hover;
   cursor: pointer;
-  outline:0;
+  outline: 0;
 }
 button {
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.5), 0 15px 40px rgba(166, 173, 201, 0.2);
