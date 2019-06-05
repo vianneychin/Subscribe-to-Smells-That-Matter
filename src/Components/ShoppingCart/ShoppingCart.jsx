@@ -6,9 +6,9 @@ const ShoppingCart = () => {
     <StyledShoppingCart>
       <main>
         <section>
-          <h2>cart</h2>
-          <p>A really nice candle.</p>
+          <h2>🛒</h2>
           <h3>checkout: $10</h3>
+          <p>A really nice candle.</p>
         </section>
         <section>
           <div>

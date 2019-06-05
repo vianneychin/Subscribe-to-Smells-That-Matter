@@ -11,6 +11,9 @@ export const StyledShoppingCart = styled.div`
         h2, p, h3 {
           text-align: center;
         }
+        h2 {
+          font-size: 3em;
+        }
         h3 {
           font-weight: 500;
         }
