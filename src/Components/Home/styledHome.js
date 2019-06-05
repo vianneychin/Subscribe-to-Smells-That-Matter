@@ -19,9 +19,6 @@ export const StyledHome = styled.div`
           background-color: rgb(0, 0, 0, .8);
           color: white;
       }
-      > button:hover {
-          cursor: pointer;
-      }
     }
   }
   @media (max-width: 640px) {

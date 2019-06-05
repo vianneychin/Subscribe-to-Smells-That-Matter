@@ -5,6 +5,7 @@ export const StyledShoppingCart = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-top: 5em;
   main {
     > section:nth-of-type(1) {
         h2, p, h3 {
@@ -37,9 +38,7 @@ export const StyledShoppingCart = styled.div`
               height: 30px;
               background-color: white;
               border: none;
-            }
-            > button:hover {
-              cursor: pointer;
+              box-shadow: none;
             }
           }
           > div:nth-of-type(2) {
@@ -55,7 +54,6 @@ export const StyledShoppingCart = styled.div`
                 font-size: 1em;
                 justify-content: space-around;
                 border-radius: 4px;
-                box-shadow: 0 5px 10px rgba(154, 160, 185, 0.5), 0 15px 40px rgba(166, 173, 201, 0.2);
             }
             > button:nth-of-type(2) {
                 box-shadow: none;
@@ -68,6 +66,7 @@ export const StyledShoppingCart = styled.div`
     }
   }
   @media(max-width: 640px) {
+    margin-top: 3em;
     main {
       width: 100%;
       height: 80vh;

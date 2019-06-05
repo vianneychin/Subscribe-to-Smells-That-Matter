@@ -31,9 +31,6 @@ export const StyledStore = styled.div`
               background-color: black;
               box-shadow: 0 5px 10px rgba(154, 160, 185, 0.5), 0 15px 40px rgba(166, 173, 201, 0.2);
           }
-          > button:hover {
-              cursor: pointer;
-            }
       }
       > section:nth-of-type(1) {
         h3 {
