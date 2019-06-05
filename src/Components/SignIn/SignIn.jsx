@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { StyledSignIn } from './styledSignIn'
+import useForm from '../../hooks/useForm'
 
 const SignIn = () => {
+  const { inputs, handleInputChange, handleSubmit } = useForm()
   return (
     <StyledSignIn>
       <div>
@@ -15,9 +17,21 @@ const SignIn = () => {
       </div>
       <form>
         <label>Username</label>
-        <input placeholder="Username" type="text" />
+        <input
+          inputs={inputs.name}
+          onChange={handleInputChange}
+          placeholder="Username"
+          type="text"
+          autoComplete="off"
+        />
+
         <label>Password</label>
-        <input placeholder="Password" type="password" />
+        <input
+          inputs={inputs.password}
+          placeholder="Password"
+          type="password"
+          autoComplete="off"
+        />
         <button>Sign in</button>
       </form>
     </StyledSignIn>

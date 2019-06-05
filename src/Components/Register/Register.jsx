@@ -1,15 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { StyledRegister } from './styledRegister'
+import useForm from '../../hooks/useForm';
 
 const Register = () => {
-  const [values, setValues] = useState({})
-
-  const handleChange = (e) => {
-    e.preventDefault()
-    setValues({...values, [e.target.name]: e.target.value})
-  }
-
+  const { inputs, handleInputChange, handleSubmit } = useForm()
   return (
     <StyledRegister>
       <div>
@@ -20,39 +15,45 @@ const Register = () => {
           </h3>
         </div>
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Name*</label>
         <input
+          inputs={inputs.name}
+          onChange={handleInputChange}
           placeholder="Name"
           name="name"
           type="text"
-          value="values.name"
-          onChange={handleChange()}
+          autoComplete="off"
         />
 
         <label>Email*</label>
         <input
+          inputs={inputs.email}
+          onChange={handleInputChange}
           placeholder="Email"
           name="email"
           type="text"
-          value="values.email"
-          onChange={handleChange()}
+          autoComplete="off"
         />
 
         <label>Password*</label>
         <input
+          inputs={inputs.password}
+          onChange={handleInputChange}
           placeholder="Password"
           name="password"
           type="password"
-          value="values.password"
+          autoComplete="off"
         />
 
         <label>Verify Password*</label>
         <input
+          inputs={inputs.verifyPassword}
+          onChange={handleInputChange}
           placeholder="Verify Password"
           name="verifyPassword"
-          value="values.verifyPassword"
           type="password"
+          autoComplete="off"
         />
 
         <button>Register</button>

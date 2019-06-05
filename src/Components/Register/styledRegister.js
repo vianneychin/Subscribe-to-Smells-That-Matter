@@ -49,7 +49,7 @@ export const StyledRegister = styled.div`
         width: 250px;
         line-height: 50px;
         border-radius: 25px;
-        margin-top: 5em;
+        margin-top: 2em;
         background-color: grey;
         color: #FFF;
         border: none;
@@ -83,11 +83,10 @@ export const StyledRegister = styled.div`
           width: 90%;
           max-width: 400px;
       }
-      > input:nth-of-type(1) {
-        margin-bottom: 3em;
+      > input:nth-child(n+2) {
+        margin-bottom: 2em;
       }
-      > input:nth-of-type(2) {
-        margin-bottom: 3em;
+      > button {
       }
     }
   }
