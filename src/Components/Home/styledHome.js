@@ -16,11 +16,11 @@ export const StyledHome = styled.div`
           border: none;
           border-radius: 4px;
           box-shadow: 0 5px 10px rgba(154, 160, 185, 0.5), 0 15px 40px rgba(166, 173, 201, 0.2);
-          /* background: linear-gradient(
-            rgb(0, 0, 0, .9), rgb(255,255,255,.9)
-          ); */
           background-color: rgb(0, 0, 0, .8);
           color: white;
+      }
+      > button:hover {
+          cursor: pointer;
       }
     }
   }

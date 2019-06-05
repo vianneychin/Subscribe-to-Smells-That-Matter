@@ -12,10 +12,9 @@ export const StyledStore = styled.div`
         align-items: center;
     }
     > aside {
-        height: 100vh;
+        height: 40vh;
         display: flex;
         flex-direction: column;
-
         align-items: center;
       > section:nth-of-type(1) {
           display: flex;
