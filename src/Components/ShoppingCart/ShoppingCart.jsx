@@ -7,6 +7,7 @@ const ShoppingCart = () => {
       <main>
         <section>
           <h2>cart</h2>
+          <p>A really nice candle.</p>
           <h3>checkout: $10</h3>
         </section>
         <section>

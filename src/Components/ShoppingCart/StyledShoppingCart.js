@@ -1,53 +1,89 @@
 import styled from 'styled-components'
 
 export const StyledShoppingCart = styled.div`
-  /* height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  > main {
-      display: flex;
-      flex-direction: column;
-      background-color: red;
-      width: 1200px;
-      height: 100vh;
+  align-content: center;
+  main {
     > section:nth-of-type(1) {
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        justify-content: center;;
-        height: 20vh;
-        background-color: grey;
-        > h2 {
-            background-color: beige;
+        h2, p, h3 {
+          text-align: center;
         }
-        > h3 {
-            background-color: bisque;
+        h3 {
+          font-weight: 500;
         }
-    }
+      }
     > section:nth-of-type(2) {
-        display: flex;
-        > aside {
-          background-color: yellow;
+      > aside {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          > div:nth-of-type(1) {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-around;
+            border: 1px solid black;
+            line-height: 1.65em;
+            width: 130px;
+            height: 36px;
+            > button, span {
+              font-size: 1.5em;
+              font-weight: 300;
+            }
+            > button {
+              width: 30px;
+              height: 30px;
+              background-color: white;
+              border: none;
+            }
+            > button:hover {
+              cursor: pointer;
+            }
+          }
+          > div:nth-of-type(2) {
+              width: 100%;
+              display: flex;
+              justify-content: space-evenly;
+              padding-top: 4em;
+            > button {
+                width: 120px;
+                height: 50px;
+                border: 1px solid black;
+                background-color: white;
+                font-size: 1em;
+                justify-content: space-around;
+                border-radius: 4px;
+                box-shadow: 0 5px 10px rgba(154, 160, 185, 0.5), 0 15px 40px rgba(166, 173, 201, 0.2);
+            }
+            > button:nth-of-type(2) {
+                box-shadow: none;
+                border: .5px solid grey;
+
+            }
+          }
         }
-      > div:nth-of-type(1) {
-          width: 500px;
-          height: 500px;
-          margin-right: 0;
       }
     }
   }
-  @media (max-width: 640px) {
-    background-color: blue;
-    > section:nth-of-type(1) {
+  @media(max-width: 640px) {
+    main {
+      width: 100%;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      > section:nth-of-type(2) {
+        > aside {
+        > div:nth-of-type(1) {
+          > img {
+            height: 300px;
+            width: 300px;
+          }
+        }
+      }
     }
-    img {
-      height: 300px;
-      width: 300px;
-    }
-  } */
-  } */
+  }
 `

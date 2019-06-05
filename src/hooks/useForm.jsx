@@ -4,9 +4,7 @@ const useForm = register => {
   const [inputs, setInputs] = useState({})
 
   const handleSubmit = event => {
-    if (event) {
-      event.preventDefault()
-    }
+    event.preventDefault()
   }
   const handleInputChange = (event) => {
     /* event.persist() is async */
