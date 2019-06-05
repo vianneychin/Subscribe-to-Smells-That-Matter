@@ -10,6 +10,9 @@ export const StyledSignIn = styled.div`
       width: 700px;
       > h3 {
         font-weight: 300;
+        a, a:visited {
+          color: green;
+        }
       }
       > h1, h3 {
         align-self: flex-start;

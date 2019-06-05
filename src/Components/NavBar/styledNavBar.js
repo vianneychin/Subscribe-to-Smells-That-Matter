@@ -27,7 +27,6 @@ export const Nav = styled.nav`
   }
   @media (max-width: 640px) {
     width: 100%;
-    /* position: fixed; */
     flex-direction: column;
     justify-content: center;
     height: auto;

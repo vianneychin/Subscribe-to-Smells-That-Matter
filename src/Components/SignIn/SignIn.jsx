@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { StyledSignIn } from './styledSignIn'
 
 const SignIn = () => {
@@ -8,7 +9,7 @@ const SignIn = () => {
         <div>
           <h1>Sign in</h1>
           <h3>
-          Don't have an account? Create one here.
+            Don't have an account? Create one <Link to="/register">here.</Link>
           </h3>
         </div>
       </div>

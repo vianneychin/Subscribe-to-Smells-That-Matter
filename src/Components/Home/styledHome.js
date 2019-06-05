@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 
 export const StyledHome = styled.div`
-  background-color: red;
+  div:nth-of-type(1) {
+    background-color: grey;
+    height: 100vh;
+  }
 `
