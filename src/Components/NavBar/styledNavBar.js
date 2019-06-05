@@ -34,7 +34,7 @@ export const Nav = styled.nav`
       display: none;
     }
   }
-  @media (max-width: 900px) {
+  @media (max-width: 1050px) {
     h1 {
       display: none;
     }
