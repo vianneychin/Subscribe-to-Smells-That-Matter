@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import { set } from 'mongoose';
 
 const useShoppingCart = () => {
-  const [total, setTotal] = useState(0)
-  const [quantity, setQuantity] = useState(0)
+  const [total, setTotal] = useState(10)
+  const [quantity, setQuantity] = useState(1)
   const [emptyCart, setEmptyCart] = useState('none')
   const [yourCartIsEmpty, setYourCartIsEmpty] = useState('Your cart is empty.')
 
@@ -17,6 +18,8 @@ const useShoppingCart = () => {
     }
   }
   const emptyItemsInCart = () => {
+    setTotal(0)
+    setQuantity(0)
     setEmptyCart('none')
     setYourCartIsEmpty('Your shopping cart is empty.')
   }

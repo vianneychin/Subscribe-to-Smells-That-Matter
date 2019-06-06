@@ -1,12 +1,13 @@
 import React from 'react'
 import { StyledShoppingCart } from './StyledShoppingCart'
+import ContinueModal from './ContinueModal/ContinueModal'
 
 /* Props passed down from the App.jsx */
 const ShoppingCart = (props) => {
   return (
     <StyledShoppingCart>
       <div>
-        {props.yourCartIsEmpty}
+        {/* {props.yourCartIsEmpty} */}
       </div>
       <main style={{ display: props.emptyCart }}>
         <section>
@@ -31,12 +32,13 @@ const ShoppingCart = (props) => {
               </button>
             </div>
             <div>
-              <button>checkout</button>
+              <button>continue</button>
               <button onClick={props.emptyItemsInCart}>remove</button>
             </div>
           </aside>
         </section>
       </main>
+      <ContinueModal />
     </StyledShoppingCart>
   )
 }
