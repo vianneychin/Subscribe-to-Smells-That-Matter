@@ -30,7 +30,7 @@ export const StyledShoppingCart = styled.div`
               justify-content: space-around;
               border: 1px solid black;
               line-height: 1.65em;
-              width: 130px;
+              width: 160px;
               height: 36px;
             > button, span {
                 font-size: 1.5em;
