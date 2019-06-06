@@ -1,12 +1,14 @@
 import React from 'react'
 import { StyledContinueModal } from './styledContinueModal';
 
-const ContinueModal = () => {
+const ContinueModal = ({setToggle}) => {
   return (
     <StyledContinueModal>
       <h2>Add this to your subscription?</h2>
       <div>
-        <button>NO</button>
+        <button onClick={() => setToggle(false)}>
+          NO
+        </button>
         <button>YES</button>
       </div>
     </StyledContinueModal>

@@ -2,17 +2,21 @@ import React from 'react'
 import { StyledShoppingCart } from './StyledShoppingCart'
 import ContinueModal from './ContinueModal/ContinueModal'
 
-/* Props passed down from the App.jsx */
-const ShoppingCart = (props) => {
+import UseModal from '../../hooks/useModal'
+
+const ShoppingCart = ({
+  emptyCart, total, removeIncrementFromCart, quantity, addIncrementToCart, emptyItemsInCart, yourCartIsEmpty
+}) => {
+  const { toggle, setToggle, toggleModal } = UseModal()
   return (
     <StyledShoppingCart>
       <div>
-        {/* {props.yourCartIsEmpty} */}
+        { yourCartIsEmpty }
       </div>
-      <main style={{ display: props.emptyCart }}>
+      <main style={{ display: emptyCart }}>
         <section>
           <h2>🛒</h2>
-          <h3>checkout: ${ props.total }</h3>
+          <h3>checkout: ${ total }</h3>
           <p>A really nice candle.</p>
         </section>
         <section>
@@ -21,25 +25,35 @@ const ShoppingCart = (props) => {
           </div>
           <aside>
             <div>
-              <button onClick={props.removeIncrementFromCart}>
+              <button onClick={ removeIncrementFromCart }>
                 -
               </button>
               <span>
-                { props.quantity }
+                { quantity }
               </span>
-              <button onClick={props.addIncrementToCart}>
+              <button onClick={ addIncrementToCart }>
                 +
               </button>
             </div>
             <div>
-              <button>continue</button>
-              <button onClick={props.emptyItemsInCart}>remove</button>
+              <button onClick={setToggle}>
+                continue
+              </button>
+              <button onClick={emptyItemsInCart}>remove</button>
             </div>
           </aside>
         </section>
       </main>
-      <div className="disableBackground"></div>
-      <ContinueModal />
+      {
+        toggle
+        ? <div className="disableBackground" />
+        : <div />
+      }
+      {
+        toggle
+        ? <ContinueModal setToggle={setToggle}/>
+        : <div />
+      }
     </StyledShoppingCart>
   )
 }
