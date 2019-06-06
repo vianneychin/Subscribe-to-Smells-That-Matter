@@ -38,6 +38,7 @@ const ShoppingCart = (props) => {
           </aside>
         </section>
       </main>
+      <div className="disableBackground"></div>
       <ContinueModal />
     </StyledShoppingCart>
   )

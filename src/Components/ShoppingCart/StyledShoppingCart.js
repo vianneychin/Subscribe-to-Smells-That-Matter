@@ -25,23 +25,23 @@ export const StyledShoppingCart = styled.div`
           align-items: center;
           justify-content: center;
           > div:nth-of-type(1) {
-            display: inline-flex;
-            align-items: center;
-            justify-content: space-around;
-            border: 1px solid black;
-            line-height: 1.65em;
-            width: 130px;
-            height: 36px;
+              display: inline-flex;
+              align-items: center;
+              justify-content: space-around;
+              border: 1px solid black;
+              line-height: 1.65em;
+              width: 130px;
+              height: 36px;
             > button, span {
-              font-size: 1.5em;
-              font-weight: 300;
+                font-size: 1.5em;
+                font-weight: 300;
             }
             > button {
-              width: 30px;
-              height: 30px;
-              background-color: white;
-              border: none;
-              box-shadow: none;
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                border: none;
+                box-shadow: none;
             }
           }
           > div:nth-of-type(2) {
@@ -67,6 +67,15 @@ export const StyledShoppingCart = styled.div`
         }
       }
     }
+  }
+  .disableBackground {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(0,0,0,.7);
+    height: 100vh;
+    width: 100vw;
+
   }
   @media(max-width: 640px) {
     margin-top: 3em;
