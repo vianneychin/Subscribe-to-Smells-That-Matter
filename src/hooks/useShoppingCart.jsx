@@ -4,7 +4,7 @@ const useShoppingCart = () => {
   const [total, setTotal] = useState(0)
   const [quantity, setQuantity] = useState(0)
   const [emptyCart, setEmptyCart] = useState('none')
-  const [yourCartIsEmpty, setYourCartIsEmpty] = useState('')
+  const [yourCartIsEmpty, setYourCartIsEmpty] = useState('Your cart is empty.')
 
   const addIncrementToCart = () => {
     setTotal(total + 10)
@@ -22,6 +22,7 @@ const useShoppingCart = () => {
   }
   const addItemToCart = () => {
     setEmptyCart('')
+    setYourCartIsEmpty('')
   }
   return {
     total, setTotal,

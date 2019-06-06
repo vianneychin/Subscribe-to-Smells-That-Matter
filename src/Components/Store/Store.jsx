@@ -1,11 +1,9 @@
 import React from 'react'
-import useShoppingCart from '../../hooks/useShoppingCart'
 import { Link } from 'react-router-dom'
 import { StyledStore } from './styledStore'
 
 
-const Store = () => {
-  const { addItemToCart } = useShoppingCart()
+const Store = (props) => {
   return (
     <StyledStore>
       <div>
@@ -18,7 +16,7 @@ const Store = () => {
           <section>
             <h4>A Really Nice Candle</h4>
             <h3>Notes: Oak, Smoke, and Toast</h3>
-            <Link to="/cart" onClick={addItemToCart}>
+            <Link to="/cart" onClick={props.addItemToCart}>
               <button>
                 Add to cart
               </button>

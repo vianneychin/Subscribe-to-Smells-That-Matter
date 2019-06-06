@@ -8,9 +8,14 @@ import Login from './Components/Login/Login'
 import Store from './Components/Store/Store'
 import ShoppingCart from './Components/ShoppingCart/ShoppingCart'
 import './global.css'
+
+/* HOOK */
 import useShoppingCart from './hooks/useShoppingCart'
 
+
+
 const App = () => {
+  const { addIncrementToCart, removeIncrementFromCart, emptyItemsInCart, total, quantity, emptyCart, yourCartIsEmpty, addItemToCart } = useShoppingCart()
   return (
       <BrowserRouter>
         <NavBar  />
@@ -32,11 +37,25 @@ const App = () => {
         />
         <Route
           path="/store"
-          render={() => <Store />}
+          render={
+            () => <Store
+                    addItemToCart={addItemToCart}
+                  />
+          }
         />
         <Route
           path="/cart"
-          render={() => <ShoppingCart/>}
+          render={
+            () => <ShoppingCart
+                    addIncrementToCart={addIncrementToCart}
+                    removeIncrementFromCart={removeIncrementFromCart}
+                    emptyItemsInCart={emptyItemsInCart}
+                    total={total}
+                    quantity={quantity}
+                    emptyCart={emptyCart}
+                    yourCartIsEmpty={yourCartIsEmpty}
+                  />
+            }
         />
       </BrowserRouter>
   )
