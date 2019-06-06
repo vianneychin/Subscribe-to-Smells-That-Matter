@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { Redirect, withRouter } from 'react-router-dom'
 
 const useLoginForm = () => {
   const [inputs, setInputs] = useState({})
@@ -15,23 +16,27 @@ const useLoginForm = () => {
           'Content-Type': 'application/json'
         }
       })
-      /* TODO Create a state that will update a message from the backend of the user object */
       const user = await response.json()
-      if(user.message) {
+      if (user.message) {
         setErrorMessage(user.message)
       } else if (user.user) {
+        /* if user is logged in */
         setName(user.user.name)
+        setLogged(true)
       }
     } catch (error) {
       return error
     }
   }
-
-
+  const checkLogin = () => {
+    if (logged) {
+      return <Redirect to="/home" />
+    }
+  }
   const handleLoginForm = (event) => {
     event.persist()
-    setInputs( inputs => (
-      {...inputs, [event.target.name] : event.target.value}
+    setInputs(inputs => (
+      { ...inputs, [event.target.name]: event.target.value }
     ))
   }
   return {
@@ -39,7 +44,9 @@ const useLoginForm = () => {
     handleLoginForm,
     inputs,
     errorMessage,
-    name
+    name,
+    checkLogin,
+    logged
   }
 }
 
