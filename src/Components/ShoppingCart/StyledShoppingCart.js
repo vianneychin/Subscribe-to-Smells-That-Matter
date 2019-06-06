@@ -78,7 +78,6 @@ export const StyledShoppingCart = styled.div`
 
   }
   @media(max-width: 640px) {
-    margin-top: 3em;
     main {
       width: 100%;
       height: 80vh;
@@ -98,6 +97,11 @@ export const StyledShoppingCart = styled.div`
           > img {
             height: 300px;
             width: 300px;
+          }
+        }
+        > div:nth-of-type(2) {
+          > button {
+            margin-bottom: 2em;
           }
         }
       }
