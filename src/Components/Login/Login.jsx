@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { StyledSignIn } from './styledSignIn'
-import useForm from '../../hooks/useForm'
+import { StyledLogin } from './styledLogin'
 
-const SignIn = () => {
-  const { inputs, handleInputChange, handleSubmit } = useForm()
+import useLoginForm from '../../hooks/useLoginForm'
+
+const Login = () => {
+  const {handleSubmit, handleLoginForm, inputs} = useLoginForm()
   return (
-    <StyledSignIn>
+    <StyledLogin>
       <div>
         <div>
           <h1>Sign in</h1>
@@ -15,27 +16,30 @@ const SignIn = () => {
           </h3>
         </div>
       </div>
-      <form>
-        <label>Username</label>
+      <form onSubmit={handleSubmit}>
+        <label>Email</label>
         <input
-          inputs={inputs.name}
-          onChange={handleInputChange}
-          placeholder="Username"
+          email={inputs.email}
+          name="email"
+          onChange={handleLoginForm}
+          placeholder="Email"
           type="text"
           autoComplete="off"
         />
 
         <label>Password</label>
         <input
-          inputs={inputs.password}
+          password={inputs.password}
+          name="password"
+          onChange={handleLoginForm}
           placeholder="Password"
           type="password"
           autoComplete="off"
         />
         <button>Sign in</button>
       </form>
-    </StyledSignIn>
+    </StyledLogin>
   )
 }
 
-export default SignIn
+export default Login

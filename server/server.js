@@ -33,10 +33,12 @@ app.use(session({
 
 /* cors */
 const corsOptions = {
+  /* origin is the frontend */
   origin: 'http://localhost:3000',
   credentials: true,
   optionsSuccessStatus: 200
 }
+
 /* Calling corsOption */
 app.use(cors(corsOptions))
 

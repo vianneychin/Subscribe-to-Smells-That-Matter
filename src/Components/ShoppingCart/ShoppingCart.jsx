@@ -1,13 +1,15 @@
-import React from 'react'
+import React , { useState, useEffect } from 'react'
 import { StyledShoppingCart } from './StyledShoppingCart'
 
 const ShoppingCart = () => {
+  const [total, setTotal] = useState(0)
+  const [quantity, setQuantity] = useState(0)
   return (
     <StyledShoppingCart>
       <main>
         <section>
           <h2>🛒</h2>
-          <h3>checkout: $10</h3>
+          <h3>checkout: ${ total }</h3>
           <p>A really nice candle.</p>
         </section>
         <section>
@@ -16,9 +18,13 @@ const ShoppingCart = () => {
           </div>
           <aside>
             <div>
-              <button>-</button>
+              <button onClick={() => setTotal(total - 10)}>
+                -
+              </button>
               <span>1</span>
-              <button>+</button>
+              <button onClick={() => setTotal(total + 10)}>
+                +
+              </button>
             </div>
             <div>
               <button>checkout</button>

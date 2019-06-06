@@ -18,7 +18,7 @@ const NavBar = () => {
         the only subscription you'll ever need.
       </h1>
       <NavLink to="/login" activeStyle={{color: 'grey'}}>
-        Sign in
+        Login
       </NavLink>
       <NavLink to="/cart" activeStyle={{color: 'grey'}}>
         Cart

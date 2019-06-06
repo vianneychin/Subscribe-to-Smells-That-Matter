@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { StyledRegister } from './styledRegister'
-import useForm from '../../hooks/useForm';
+import useRegisterForm from '../../hooks/useRegisterForm';
 
 const Register = () => {
-  const { inputs, handleInputChange, handleSubmit } = useForm()
+  const { inputs, handleInputChange, handleSubmit } = useRegisterForm()
   return (
     <StyledRegister>
       <div>
@@ -56,7 +56,7 @@ const Register = () => {
           autoComplete="off"
         />
 
-        <button>Register</button>
+        <button type="submit">Register</button>
       </form>
     </StyledRegister>
   )

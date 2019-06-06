@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-export const StyledSignIn = styled.div`
+export const StyledLogin = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

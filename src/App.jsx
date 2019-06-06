@@ -4,7 +4,7 @@ import NavBar from './Components/NavBar/Navbar'
 import Home from './Components/Home/Home'
 import About from './Components/About/About'
 import Register from './Components/Register/Register'
-import SignIn from './Components/SignIn/SignIn'
+import Login from './Components/Login/Login'
 import Store from './Components/Store/Store'
 import ShoppingCart from './Components/ShoppingCart/ShoppingCart'
 import './global.css'
@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/"   exact component={Home} />
         <Route path="/about"    component={About} />
         <Route path="/register" component={Register} />
-        <Route path="/login"    component={SignIn} />
+        <Route path="/login"    component={Login} />
         <Route path="/store"    component={Store}  />
         <Route path="/cart"     component={ShoppingCart}  />
       </BrowserRouter>
