@@ -8,17 +8,36 @@ import Login from './Components/Login/Login'
 import Store from './Components/Store/Store'
 import ShoppingCart from './Components/ShoppingCart/ShoppingCart'
 import './global.css'
+import useShoppingCart from './hooks/useShoppingCart'
 
 const App = () => {
   return (
       <BrowserRouter>
         <NavBar  />
-        <Route path="/"   exact component={Home} />
-        <Route path="/about"    component={About} />
-        <Route path="/register" component={Register} />
-        <Route path="/login"    component={Login} />
-        <Route path="/store"    component={Store}  />
-        <Route path="/cart"     component={ShoppingCart}  />
+        <Route
+          path="/"
+          exact render={ () => <Home /> }
+        />
+        <Route
+          path="/about"
+          render={ () => <About /> }
+        />
+        <Route
+          path="/register"
+          render={ () => <Register />}
+        />
+        <Route
+          path="/login"
+          render={() => <Login/>}
+        />
+        <Route
+          path="/store"
+          render={() => <Store />}
+        />
+        <Route
+          path="/cart"
+          render={() => <ShoppingCart/>}
+        />
       </BrowserRouter>
   )
 }

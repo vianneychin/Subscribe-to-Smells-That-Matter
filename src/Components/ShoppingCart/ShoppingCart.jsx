@@ -1,30 +1,16 @@
-import React , { useState } from 'react'
+import React from 'react'
+import useShoppingCart from '../../hooks/useShoppingCart'
 import { StyledShoppingCart } from './StyledShoppingCart'
 
 const ShoppingCart = () => {
-  const [total, setTotal] = useState(0)
-  const [quantity, setQuantity] = useState(0)
-  const [emptyCart, setEmptyCart] = useState('flex')
-  const [yourCartIsEmpty, setYourCartIsEmpty] = useState('')
-
-  const addToCart = () => {
-    setTotal(total + 10)
-    setQuantity(quantity + 1)
-  }
-  const removeFromCart = () => {
-    if (quantity !== 0) {
-      setTotal(total - 10)
-      setQuantity(quantity - 1)
-    }
-  }
-  const emptyItemsInCart = () => {
-    /* Changes the StyledShoppingCart display to none */
-    setEmptyCart('none')
-  }
-
+  const { addIncrementToCart, removeIncrementFromCart, emptyItemsInCart, total, quantity, emptyCart, yourCartIsEmpty } = useShoppingCart()
   return (
     <StyledShoppingCart>
-      <main >
+      <div>
+        {yourCartIsEmpty}
+        Your shopping cart is empty.
+      </div>
+      <main style={{ display: emptyCart }}>
         <section>
           <h2>🛒</h2>
           <h3>checkout: ${ total }</h3>
@@ -36,13 +22,13 @@ const ShoppingCart = () => {
           </div>
           <aside>
             <div>
-              <button onClick={removeFromCart}>
+              <button onClick={removeIncrementFromCart}>
                 -
               </button>
               <span>
                 { quantity }
               </span>
-              <button onClick={addToCart}>
+              <button onClick={addIncrementToCart}>
                 +
               </button>
             </div>
@@ -53,7 +39,6 @@ const ShoppingCart = () => {
           </aside>
         </section>
       </main>
-
     </StyledShoppingCart>
   )
 }

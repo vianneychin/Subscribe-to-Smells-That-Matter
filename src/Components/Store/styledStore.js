@@ -20,16 +20,19 @@ export const StyledStore = styled.div`
           display: flex;
           flex-direction: column;
           text-align: center;
-          > button {
-              margin: 1em;
-              margin-bottom: 1.7em;
-              font-size: 1.2em;
-              font-weight: 200;
-              line-height: 2em;
-              border: none;
-              color: white;
-              background-color: black;
-              box-shadow: 0 5px 10px rgba(154, 160, 185, 0.5), 0 15px 40px rgba(166, 173, 201, 0.2);
+          > a {
+            > button {
+                width: 30vw;
+                margin: 1em;
+                margin-bottom: 1.7em;
+                font-size: 1.2em;
+                font-weight: 200;
+                line-height: 2em;
+                border: none;
+                color: white;
+                background-color: black;
+                box-shadow: 0 5px 10px rgba(154, 160, 185, 0.5), 0 15px 40px rgba(166, 173, 201, 0.2);
+            }
           }
       }
       > section:nth-of-type(1) {
