@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyledContinueModal } from './styledContinueModal';
 
-const ContinueModal = ({setToggle}) => {
+const ContinueModal = ({ setToggle }) => {
   return (
     <StyledContinueModal>
       <h2>Add this to your subscription?</h2>

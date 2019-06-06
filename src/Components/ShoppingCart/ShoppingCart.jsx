@@ -5,7 +5,8 @@ import ContinueModal from './ContinueModal/ContinueModal'
 import UseModal from '../../hooks/useModal'
 
 const ShoppingCart = ({
-  emptyCart, total, removeIncrementFromCart, quantity, addIncrementToCart, emptyItemsInCart, yourCartIsEmpty
+  total, quantity, emptyCart, emptyItemsInCart, yourCartIsEmpty,
+  removeIncrementFromCart, addIncrementToCart
 }) => {
   const { toggle, setToggle, toggleModal } = UseModal()
   return (
@@ -36,10 +37,10 @@ const ShoppingCart = ({
               </button>
             </div>
             <div>
-              <button onClick={setToggle}>
+              <button onClick={ setToggle }>
                 continue
               </button>
-              <button onClick={emptyItemsInCart}>remove</button>
+              <button onClick={ emptyItemsInCart }>remove</button>
             </div>
           </aside>
         </section>
@@ -51,7 +52,7 @@ const ShoppingCart = ({
       }
       {
         toggle
-        ? <ContinueModal setToggle={setToggle}/>
+        ? <ContinueModal setToggle={ setToggle }/>
         : <div />
       }
     </StyledShoppingCart>

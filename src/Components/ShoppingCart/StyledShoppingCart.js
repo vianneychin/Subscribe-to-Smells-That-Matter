@@ -86,6 +86,12 @@ export const StyledShoppingCart = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      > section:nth-of-type(1) {
+        margin-top: 2em;
+        h2 {
+          font-size: 2em;
+        }
+      }
       > section:nth-of-type(2) {
         > aside {
         > div:nth-of-type(1) {
