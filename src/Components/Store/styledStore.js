@@ -38,6 +38,9 @@ export const StyledStore = styled.div`
       > section:nth-of-type(1) {
         h3 {
           font-weight: 300;
+          span {
+            font-weight: 100;
+          }
         }
       }
       > section:nth-of-type(2) {

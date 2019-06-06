@@ -10,12 +10,12 @@ const Store = (props) => {
         <div>
           <img src="https://i.imgur.com/AkCVvld.png"/>
         </div>
-
         <aside>
-
           <section>
             <h4>A Really Nice Candle</h4>
-            <h3>Notes: Oak, Smoke, and Toast</h3>
+            <h3>Notes:
+              <span>&nbsp;Oak, Smoke, and Toast</span>
+            </h3>
             <Link to="/cart" onClick={props.addItemToCart}>
               <button>
                 Add to cart
@@ -28,7 +28,6 @@ const Store = (props) => {
                 Using wick and wax to create a simple, somewhat affordable, and a sensational experience for your nose and your friend's nose. Subscribe today with the only smelly subscription service you'll ever need.
             </div>
           </section>
-
         </aside>
       </div>
     </StyledStore>
