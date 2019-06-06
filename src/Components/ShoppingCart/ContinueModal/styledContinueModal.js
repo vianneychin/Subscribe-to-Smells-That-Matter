@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const StyledContinueModal = styled.div`
   position: absolute;
+  margin-top: 15em;
   display: flex;
   flex-direction: column;
   justify-content: center;
