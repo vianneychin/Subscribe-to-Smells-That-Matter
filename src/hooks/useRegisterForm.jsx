@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const useRegisterForm = register => {
+const useRegisterForm = () => {
   const [inputs, setInputs] = useState({})
   const handleSubmit = async event => {
     console.log(inputs, '<---- register form inputs')

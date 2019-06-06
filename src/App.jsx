@@ -11,14 +11,17 @@ import './global.css'
 
 /* HOOK */
 import useShoppingCart from './hooks/useShoppingCart'
+import useLoginForm from './hooks/useLoginForm'
 
 
 
 const App = () => {
   const { addIncrementToCart, removeIncrementFromCart, emptyItemsInCart, total, quantity, emptyCart, yourCartIsEmpty, addItemToCart } = useShoppingCart()
+  const { logged } = useLoginForm()
+  console.log(logged, '<---- logged App.jsx')
   return (
       <BrowserRouter>
-        <NavBar  />
+        <NavBar logged={logged}  />
         <Route
           path="/"
           exact render={ () => <Home /> }

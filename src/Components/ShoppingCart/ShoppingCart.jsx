@@ -8,7 +8,7 @@ const ShoppingCart = ({
   total, quantity, emptyCart, emptyItemsInCart, yourCartIsEmpty,
   removeIncrementFromCart, addIncrementToCart
 }) => {
-  const { toggle, setToggle, toggleModal } = UseModal()
+  const { toggle, setToggle} = UseModal()
   return (
     <StyledShoppingCart>
       <div>
@@ -16,13 +16,15 @@ const ShoppingCart = ({
       </div>
       <main style={{ display: emptyCart }}>
         <section>
-          <h2>🛒</h2>
+          <h2>
+            <span role="img" aria-label="shopping cart">🛒</span>
+          </h2>
           <h3>checkout: ${ total }</h3>
           <p>A really nice candle.</p>
         </section>
         <section>
           <div>
-            <img src="https://i.imgur.com/3iF33Tn.png"/>
+            <img alt="candle-img" src="https://i.imgur.com/3iF33Tn.png"/>
           </div>
           <aside>
             <div>

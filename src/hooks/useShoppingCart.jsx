@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { set } from 'mongoose';
 
 const useShoppingCart = () => {
   const [total, setTotal] = useState(10)

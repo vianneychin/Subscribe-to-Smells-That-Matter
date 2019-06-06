@@ -8,7 +8,7 @@ const Store = (props) => {
     <StyledStore>
       <div>
         <div>
-          <img src="https://i.imgur.com/AkCVvld.png"/>
+          <img alt="candle-img" src="https://i.imgur.com/AkCVvld.png"/>
         </div>
         <aside>
           <section>

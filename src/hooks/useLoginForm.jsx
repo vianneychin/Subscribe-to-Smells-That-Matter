@@ -1,11 +1,21 @@
-import React, { useState } from 'react'
-import { Redirect, withRouter } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Redirect } from 'react-router-dom'
 
 const useLoginForm = () => {
   const [inputs, setInputs] = useState({})
   const [logged, setLogged] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
   const [name, setName] = useState('')
+
+  useEffect(() => {
+    let user = localStorage.getItem("user")
+    let parsedUser = JSON.parse(user)
+    if (parsedUser) {
+      setName(parsedUser.name)
+      setLogged(true)
+    }
+  }, [])
+
   const handleSubmit = async event => {
     event.preventDefault()
     try {
@@ -21,6 +31,7 @@ const useLoginForm = () => {
         setErrorMessage(user.message)
       } else if (user.user) {
         /* if user is logged in */
+        localStorage.setItem("user", JSON.stringify(user.user))
         setName(user.user.name)
         setLogged(true)
       }

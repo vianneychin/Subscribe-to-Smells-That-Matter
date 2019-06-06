@@ -1,17 +1,18 @@
-import React, { useState } from 'react'
-import { Link , Redirect} from 'react-router-dom'
+import React from 'react'
+import { Link, Redirect } from 'react-router-dom'
 import { StyledLogin } from './styledLogin'
 
 /* Hook */
 import useLoginForm from '../../hooks/useLoginForm'
 
 const Login = () => {
-  const { checkLogin, errorMessage, handleSubmit, handleLoginForm, inputs, logged } = useLoginForm()
-  console.log(logged)
+  const { errorMessage, handleSubmit, handleLoginForm, inputs, logged } = useLoginForm()
   return (
     <StyledLogin>
       {
-        logged && <Redirect to='/' />
+        logged
+          ? <Redirect to='/' />
+          : <div />
       }
       <div>
         <div>
@@ -42,7 +43,7 @@ const Login = () => {
           autoComplete="off"
         />
         <p> {errorMessage}</p>
-        <button onClick={checkLogin}>Sign in</button>
+        <button>Sign in</button>
       </form>
     </StyledLogin>
   )

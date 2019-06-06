@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { StyledRegister } from './styledRegister'
 import useRegisterForm from '../../hooks/useRegisterForm';
