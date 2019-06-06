@@ -5,7 +5,7 @@ import { StyledLogin } from './styledLogin'
 import useLoginForm from '../../hooks/useLoginForm'
 
 const Login = () => {
-  const {handleSubmit, handleLoginForm, inputs} = useLoginForm()
+  const {errorMessage, handleSubmit, handleLoginForm, inputs} = useLoginForm()
   return (
     <StyledLogin>
       <div>
@@ -36,6 +36,7 @@ const Login = () => {
           type="password"
           autoComplete="off"
         />
+        <p> { errorMessage }</p>
         <button>Sign in</button>
       </form>
     </StyledLogin>

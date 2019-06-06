@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
-
  /* Module dependencies */
 const app = require('../server');
 const debug = require('debug')('express-generator:server');
 const http = require('http');
 
-
-/*  */
+/* PORT #  */
 const port = normalizePort(process.env.PORT || '7000');
 app.set('port', port);
 console.log(port)
@@ -37,9 +35,10 @@ function normalizePort(val) {
   return false;
 }
 
-/**
- * Event listener for HTTP server "error" event.
- */
+/*
+Event listener for HTTP server "error" event.
+*/
+
 
 function onError(error) {
   if (error.syscall !== 'listen') {

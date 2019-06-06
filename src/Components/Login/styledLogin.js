@@ -55,6 +55,10 @@ export const StyledLogin = styled.div`
         border: none;
         font-size: 20px;
     }
+    > p {
+        margin-top: 1.5em;
+        color: red;
+    }
   }
   @media (max-width: 640px) {
     display: block;

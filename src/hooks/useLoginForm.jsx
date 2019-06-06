@@ -1,10 +1,11 @@
 import { useState } from 'react'
 
-const useLoginForm = (register) => {
+const useLoginForm = () => {
   const [inputs, setInputs] = useState({})
   const [logged, setLogged] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
+  const [name, setName] = useState('')
   const handleSubmit = async event => {
-    console.log(inputs, '<----- login form inputs')
     event.preventDefault()
     try {
       const response = await fetch('http://localhost:7000/users/login', {
@@ -14,13 +15,18 @@ const useLoginForm = (register) => {
           'Content-Type': 'application/json'
         }
       })
-      console.log(response, '<--- this is response from login form')
+      /* TODO Create a state that will update a message from the backend of the user object */
       const user = await response.json()
-      console.log(user)
+      if(user.message) {
+        setErrorMessage(user.message)
+      } else if (user.user) {
+        setName(user.user.name)
+      }
     } catch (error) {
       return error
     }
   }
+
 
   const handleLoginForm = (event) => {
     event.persist()
@@ -31,7 +37,9 @@ const useLoginForm = (register) => {
   return {
     handleSubmit,
     handleLoginForm,
-    inputs
+    inputs,
+    errorMessage,
+    name
   }
 }
 
