@@ -8,8 +8,8 @@ const useLoginForm = () => {
   const [name, setName] = useState('')
 
   useEffect(() => {
-    let user = localStorage.getItem("user")
-    let parsedUser = JSON.parse(user)
+    const user = localStorage.getItem("user")
+    const parsedUser = JSON.parse(user)
     if (parsedUser) {
       setName(parsedUser.name)
       setLogged(true)

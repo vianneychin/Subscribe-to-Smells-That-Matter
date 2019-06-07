@@ -5,8 +5,9 @@ import { StyledLogin } from './styledLogin'
 /* Hook */
 import useLoginForm from '../../hooks/useLoginForm'
 
-const Login = () => {
+const Login = ({ setLogged }) => {
   const { errorMessage, handleSubmit, handleLoginForm, inputs, logged } = useLoginForm()
+  logged && setLogged(true)
   return (
     <StyledLogin>
       {
