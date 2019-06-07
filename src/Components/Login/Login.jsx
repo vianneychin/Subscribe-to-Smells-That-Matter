@@ -42,7 +42,7 @@ const Login = () => {
           type="password"
           autoComplete="off"
         />
-        <p> {errorMessage}</p>
+        <p>{errorMessage}</p>
         <button>Sign in</button>
       </form>
     </StyledLogin>
