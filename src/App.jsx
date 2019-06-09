@@ -7,6 +7,7 @@ import Register from './Components/Register/Register'
 import Login from './Components/Login/Login'
 import Store from './Components/Store/Store'
 import ShoppingCart from './Components/ShoppingCart/ShoppingCart'
+import YourSubscription from './Components/YourSubscription/YourSubscription'
 import './global.css'
 
 /* HOOK */
@@ -54,6 +55,12 @@ const App = () => {
             emptyCart={emptyCart}
             yourCartIsEmpty={yourCartIsEmpty}
           />
+        }
+      />
+      <Route
+        path="/subscribed"
+        render={
+          () => <YourSubscription/>
         }
       />
     </BrowserRouter>

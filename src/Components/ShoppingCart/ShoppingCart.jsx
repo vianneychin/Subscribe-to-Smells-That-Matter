@@ -16,10 +16,10 @@ const ShoppingCart = ({
 
     <StyledShoppingCart>
 
-      <YourSubscription />
+      {/* <YourSubscription /> */}
 
       <div>
-        {/* { yourCartIsEmpty } */}
+        { yourCartIsEmpty }
       </div>
       <main style={{ display: emptyCart }}>
         <section>
