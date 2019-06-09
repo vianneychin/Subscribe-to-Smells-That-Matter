@@ -11,10 +11,10 @@ const Home = () => {
         </Link>
       </div>
       <div>
-
+        {/* Add content */}
       </div>
       <div>
-
+        {/* Add content */}
       </div>
     </StyledHome>
   )

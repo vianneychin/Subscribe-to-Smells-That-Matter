@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import { StyledLogin } from './styledLogin'
 
@@ -7,7 +7,15 @@ import useLoginForm from '../../hooks/useLoginForm'
 
 const Login = ({ setLogged }) => {
   const { errorMessage, handleSubmit, handleLoginForm, inputs, logged } = useLoginForm()
-  logged && setLogged(true)
+
+  useEffect( () => {
+    if (logged) {
+      setLogged(true)
+    }
+  }, [logged])
+
+
+
   return (
     <StyledLogin>
       {

@@ -2,6 +2,8 @@ import React from 'react'
 import { StyledShoppingCart } from './StyledShoppingCart'
 import ContinueModal from './ContinueModal/ContinueModal'
 
+import YourSubscription from '../YourSubscription/YourSubscription'
+
 import UseModal from '../../hooks/useModal'
 
 const ShoppingCart = ({
@@ -10,9 +12,14 @@ const ShoppingCart = ({
 }) => {
   const { toggle, setToggle} = UseModal()
   return (
+
+
     <StyledShoppingCart>
+
+      <YourSubscription />
+
       <div>
-        { yourCartIsEmpty }
+        {/* { yourCartIsEmpty } */}
       </div>
       <main style={{ display: emptyCart }}>
         <section>

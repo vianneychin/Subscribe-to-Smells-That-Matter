@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { Nav } from './styledNavBar'
 
 
 const NavBar = ({ logged }) => {
-  const [display, setDisplay] = useState('')
+  const [display, setDisplay]             = useState('')
+  const [logoutDisplay, setLogoutDisplay] = useState('none')
 
-  useEffect( () => logged ? setDisplay('none') : setDisplay(''), [logged])
+  useEffect(() => logged ? setDisplay('none')   : setDisplay(''), [logged])
+  useEffect(() => logged ? setLogoutDisplay('') : null, [logged])
+
 
   return (
     <Nav>
@@ -19,9 +22,9 @@ const NavBar = ({ logged }) => {
       <NavLink exact to="/" activeStyle={{ color: 'grey' }}>
         Home
       </NavLink>
-      <h1>
-        the only subscription you'll ever need.
-      </h1>
+        <h1>
+          the only subscription you'll ever need.
+        </h1>
       <NavLink to="/login" style={{ display: display }} activeStyle={{ color: 'grey' }}>
         Login
       </NavLink>
@@ -31,6 +34,9 @@ const NavBar = ({ logged }) => {
       <NavLink to="/store" activeStyle={{ color: 'grey' }}>
         Shop
       </NavLink>
+      <a style={{ display: logoutDisplay }}>
+        Logout
+      </a>
     </Nav>
   )
 }
