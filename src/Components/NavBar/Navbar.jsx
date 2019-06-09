@@ -8,7 +8,7 @@ const NavBar = ({ logged }) => {
   const [logoutDisplay, setLogoutDisplay] = useState('none')
 
   useEffect(() => logged ? setDisplay('none')   : setDisplay(''), [logged])
-  useEffect(() => logged ? setLogoutDisplay('') : null, [logged])
+
 
 
   return (
