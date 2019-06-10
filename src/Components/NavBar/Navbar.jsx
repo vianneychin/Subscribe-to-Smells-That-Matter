@@ -1,16 +1,33 @@
 import React, { useState, useEffect } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Redirect } from 'react-router-dom'
 import { Nav } from './styledNavBar'
 
 
 const NavBar = ({ logged }) => {
   const [display, setDisplay]             = useState('')
   const [logoutDisplay, setLogoutDisplay] = useState('none')
-
-  useEffect(() => logged ? setDisplay('none')   : setDisplay(''), [logged])
-
+  const [logout, setLogout] = useState(false)
 
 
+  useEffect( () => {
+    if (logged) {
+      setDisplay('none')
+      setLogoutDisplay('')
+    }
+    else if (logout) {
+      localStorage.clear()
+    }
+  }, [logged] )
+  const handleLogout = () => {
+    localStorage.clear()
+    window.location.reload()
+  }
+
+  // else {
+  //   setDisplay('')
+  //   setLogoutDisplay('none')
+  // }
+  
   return (
     <Nav>
       <NavLink to="/register" style={{ display: display }} activeStyle={{ color: 'grey' }}>
@@ -34,7 +51,7 @@ const NavBar = ({ logged }) => {
       <NavLink to="/store" activeStyle={{ color: 'grey' }}>
         Shop
       </NavLink>
-      <a style={{ display: logoutDisplay }}>
+      <a onClick={() => handleLogout()} style={{ display: logoutDisplay }}>
         Logout
       </a>
     </Nav>
