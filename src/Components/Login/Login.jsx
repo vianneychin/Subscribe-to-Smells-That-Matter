@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import { StyledLogin } from './styledLogin'
 
-/* Hook */
 import useLoginForm from '../../hooks/useLoginForm'
 
 const Login = ({ setLogged }) => {
