@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "nodemon ./server/bin/www"
+    "server": "nodemon ./server/bin/www",
+    "deploy" : "npm run build&&gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,7 +42,9 @@
     ]
   },
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vianneychin/subscribe-to-smells-that-matter.git"
@@ -51,6 +54,6 @@
   "bugs": {
     "url": "https://github.com/vianneychin/subscribe-to-smells-that-matter/issues"
   },
-  "homepage": "https:/vianneychin.github.io/subscribe-to-smells-that-matter",
+  "homepage": "https:/vianneychin.github.io/Subscribe-To-Smells-That-Matter",
   "description": ""
 }
