@@ -2,8 +2,6 @@ import React from 'react'
 import { StyledShoppingCart } from './StyledShoppingCart'
 import ContinueModal from './ContinueModal/ContinueModal'
 
-import YourSubscription from '../YourSubscription/YourSubscription'
-
 import UseModal from '../../hooks/useModal'
 
 const ShoppingCart = ({
@@ -15,8 +13,6 @@ const ShoppingCart = ({
 
 
     <StyledShoppingCart>
-
-      {/* <YourSubscription /> */}
 
       <div>
         { yourCartIsEmpty }
@@ -49,7 +45,9 @@ const ShoppingCart = ({
               <button onClick={ setToggle }>
                 continue
               </button>
-              <button onClick={ emptyItemsInCart }>remove</button>
+              <button onClick={ emptyItemsInCart }>
+                remove
+              </button>
             </div>
           </aside>
         </section>

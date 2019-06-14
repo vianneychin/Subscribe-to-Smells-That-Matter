@@ -22,12 +22,6 @@ const NavBar = ({ logged }) => {
     localStorage.clear()
     window.location.reload()
   }
-
-  // else {
-  //   setDisplay('')
-  //   setLogoutDisplay('none')
-  // }
-  
   return (
     <Nav>
       <NavLink to="/register" style={{ display: display }} activeStyle={{ color: 'grey' }}>

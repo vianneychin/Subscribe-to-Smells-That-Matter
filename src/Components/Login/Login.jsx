@@ -13,8 +13,6 @@ const Login = ({ setLogged }) => {
     }
   }, [logged])
 
-
-
   return (
     <StyledLogin>
       {

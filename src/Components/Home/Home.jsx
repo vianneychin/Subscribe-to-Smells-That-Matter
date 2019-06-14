@@ -10,12 +10,6 @@ const Home = () => {
           <button>smell me</button>
         </Link>
       </div>
-      <div>
-        {/* Add content */}
-      </div>
-      <div>
-        {/* Add content */}
-      </div>
     </StyledHome>
   )
 }

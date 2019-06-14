@@ -45,10 +45,4 @@ app.use(cors(corsOptions))
 /* /users/register for Postman */
 app.use('/users', UserRoutes)
 
-
-/* Delete this fool. */
-// app.listen(3030, () => {
-//   console.log('Server is running on port 3030.')
-// })
-
 module.exports = app

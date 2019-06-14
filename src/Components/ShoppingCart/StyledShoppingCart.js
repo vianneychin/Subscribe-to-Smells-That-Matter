@@ -106,5 +106,8 @@ export const StyledShoppingCart = styled.div`
         }
       }
     }
+    .disableBackground {
+      display: none;
+    }
   }
 `
