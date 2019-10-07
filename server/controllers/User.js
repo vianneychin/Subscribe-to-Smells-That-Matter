@@ -21,7 +21,7 @@ module.exports = {
         }
       } else {
         res.json({
-          message: "Email or password do not match."
+          message: 'Email or password do not match.'
         })
       }
     } catch (error) {

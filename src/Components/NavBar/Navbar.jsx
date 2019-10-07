@@ -2,47 +2,50 @@ import React, { useState, useEffect } from 'react'
 import { NavLink, Redirect } from 'react-router-dom'
 import { Nav } from './styledNavBar'
 
-
 const NavBar = ({ logged }) => {
-  const [display, setDisplay]             = useState('')
+  const [display, setDisplay] = useState('')
   const [logoutDisplay, setLogoutDisplay] = useState('none')
   const [logout, setLogout] = useState(false)
 
-
-  useEffect( () => {
+  useEffect(() => {
     if (logged) {
       setDisplay('none')
       setLogoutDisplay('')
-    }
-    else if (logout) {
+    } else if (logout) {
       localStorage.clear()
     }
-  }, [logged] )
+  }, [logged])
   const handleLogout = () => {
     localStorage.clear()
     window.location.reload()
   }
   return (
     <Nav>
-      <NavLink to="/register" style={{ display: display }} activeStyle={{ color: 'grey' }}>
+      <NavLink
+        to='/register'
+        style={{ display: display }}
+        activeStyle={{ color: 'grey' }}
+      >
         Register
       </NavLink>
-      <NavLink to="/about" activeStyle={{ color: 'grey' }}>
+      <NavLink to='/about' activeStyle={{ color: 'grey' }}>
         About
       </NavLink>
-      <NavLink exact to="/" activeStyle={{ color: 'grey' }}>
+      <NavLink exact to='/' activeStyle={{ color: 'grey' }}>
         Home
       </NavLink>
-        <h1>
-          the only subscription you'll ever need.
-        </h1>
-      <NavLink to="/login" style={{ display: display }} activeStyle={{ color: 'grey' }}>
+      <h1>the only subscription you'll ever need.</h1>
+      <NavLink
+        to='/login'
+        style={{ display: display }}
+        activeStyle={{ color: 'grey' }}
+      >
         Login
       </NavLink>
-      <NavLink to="/cart" activeStyle={{ color: 'grey' }}>
+      <NavLink to='/cart' activeStyle={{ color: 'grey' }}>
         Cart
       </NavLink>
-      <NavLink to="/store" activeStyle={{ color: 'grey' }}>
+      <NavLink to='/store' activeStyle={{ color: 'grey' }}>
         Shop
       </NavLink>
       <a onClick={() => handleLogout()} style={{ display: logoutDisplay }}>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
-import { StyledContinueModal } from './styledContinueModal';
+import { StyledContinueModal } from './styledContinueModal'
 import YourSubscription from '../../YourSubscription/YourSubscription'
 
 const ContinueModal = ({ setToggle }) => {
@@ -9,16 +9,10 @@ const ContinueModal = ({ setToggle }) => {
     <StyledContinueModal>
       <h2>Add this to your subscription?</h2>
       <div>
-        <button onClick={() => setToggle(false)}>
-          NO
-        </button>
-        <button onClick={() =>  setSubscribed(true)}>YES</button>
+        <button onClick={() => setToggle(false)}>NO</button>
+        <button onClick={() => setSubscribed(true)}>YES</button>
       </div>
-      {
-        subscribed
-        ? <Redirect to="/subscribed" />
-        : null
-      }
+      {subscribed ? <Redirect to='/subscribed' /> : null}
     </StyledContinueModal>
   )
 }

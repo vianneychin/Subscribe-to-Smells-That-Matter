@@ -27,10 +27,14 @@ const useShoppingCart = () => {
     setYourCartIsEmpty('')
   }
   return {
-    total, setTotal,
-    quantity, setQuantity,
-    emptyCart, setEmptyCart,
-    yourCartIsEmpty, setYourCartIsEmpty,
+    total,
+    setTotal,
+    quantity,
+    setQuantity,
+    emptyCart,
+    setEmptyCart,
+    yourCartIsEmpty,
+    setYourCartIsEmpty,
     addIncrementToCart,
     removeIncrementFromCart,
     emptyItemsInCart,

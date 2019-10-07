@@ -8,7 +8,7 @@ const useLoginForm = () => {
   const [name, setName] = useState('')
 
   useEffect(() => {
-    const user = localStorage.getItem("user")
+    const user = localStorage.getItem('user')
     const parsedUser = JSON.parse(user)
     if (parsedUser) {
       setName(parsedUser.name)
@@ -31,7 +31,7 @@ const useLoginForm = () => {
         setErrorMessage(user.message)
       } else if (user.user) {
         /* if user is logged in */
-        localStorage.setItem("user", JSON.stringify(user.user))
+        localStorage.setItem('user', JSON.stringify(user.user))
         setName(user.user.name)
         setLogged(true)
       }
@@ -41,14 +41,15 @@ const useLoginForm = () => {
   }
   const checkLogin = () => {
     if (logged) {
-      return <Redirect to="/home" />
+      return <Redirect to='/home' />
     }
   }
-  const handleLoginForm = (event) => {
+  const handleLoginForm = event => {
     event.persist()
-    setInputs(inputs => (
-      { ...inputs, [event.target.name]: event.target.value }
-    ))
+    setInputs(inputs => ({
+      ...inputs,
+      [event.target.name]: event.target.value
+    }))
   }
   return {
     handleSubmit,

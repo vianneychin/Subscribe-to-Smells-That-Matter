@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <StyledHome>
       <div>
-        <Link to="/store">
+        <Link to='/store'>
           <button>smell me</button>
         </Link>
       </div>

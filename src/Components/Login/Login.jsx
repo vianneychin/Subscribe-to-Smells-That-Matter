@@ -5,26 +5,28 @@ import { StyledLogin } from './styledLogin'
 import useLoginForm from '../../hooks/useLoginForm'
 
 const Login = ({ setLogged }) => {
-  const { errorMessage, handleSubmit, handleLoginForm, inputs, logged } = useLoginForm()
+  const {
+    errorMessage,
+    handleSubmit,
+    handleLoginForm,
+    inputs,
+    logged
+  } = useLoginForm()
 
-  useEffect( () => {
+  useEffect(() => {
     if (logged) {
       setLogged(true)
     }
-  }, [logged])
+  }, [logged, setLogged])
 
   return (
     <StyledLogin>
-      {
-        logged
-          ? <Redirect to='/' />
-          : <div />
-      }
+      {logged ? <Redirect to='/' /> : <div />}
       <div>
         <div>
           <h1>Sign in</h1>
           <h3>
-            Don't have an account? Create one <Link to="/register">here.</Link>
+            Don't have an account? Create one <Link to='/register'>here.</Link>
           </h3>
         </div>
       </div>
@@ -32,21 +34,21 @@ const Login = ({ setLogged }) => {
         <label>Email</label>
         <input
           email={inputs.email}
-          name="email"
+          name='email'
           onChange={handleLoginForm}
-          placeholder="Email"
-          type="text"
-          autoComplete="off"
+          placeholder='Email'
+          type='text'
+          autoComplete='off'
         />
 
         <label>Password</label>
         <input
           password={inputs.password}
-          name="password"
+          name='password'
           onChange={handleLoginForm}
-          placeholder="Password"
-          type="password"
-          autoComplete="off"
+          placeholder='Password'
+          type='password'
+          autoComplete='off'
         />
         <p>{errorMessage}</p>
         <button>Sign in</button>

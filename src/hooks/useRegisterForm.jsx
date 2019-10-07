@@ -19,12 +19,13 @@ const useRegisterForm = () => {
       return error
     }
   }
-  const handleInputChange = (event) => {
+  const handleInputChange = event => {
     /* event.persist() is async */
     event.persist()
-    setInputs(inputs => (
-      {...inputs, [event.target.name]: event.target.value}
-      ))
+    setInputs(inputs => ({
+      ...inputs,
+      [event.target.name]: event.target.value
+    }))
   }
   return {
     handleSubmit,

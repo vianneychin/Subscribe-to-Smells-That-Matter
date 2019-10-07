@@ -5,63 +5,47 @@ import ContinueModal from './ContinueModal/ContinueModal'
 import UseModal from '../../hooks/useModal'
 
 const ShoppingCart = ({
-  total, quantity, emptyCart, emptyItemsInCart, yourCartIsEmpty,
-  removeIncrementFromCart, addIncrementToCart
+  total,
+  quantity,
+  emptyCart,
+  emptyItemsInCart,
+  yourCartIsEmpty,
+  removeIncrementFromCart,
+  addIncrementToCart
 }) => {
-  const { toggle, setToggle} = UseModal()
+  const { toggle, setToggle } = UseModal()
   return (
-
-
     <StyledShoppingCart>
-
-      <div>
-        { yourCartIsEmpty }
-      </div>
+      <div>{yourCartIsEmpty}</div>
       <main style={{ display: emptyCart }}>
         <section>
           <h2>
-            <span role="img" aria-label="shopping cart">🛒</span>
+            <span role='img' aria-label='shopping cart'>
+              🛒
+            </span>
           </h2>
-          <h3>checkout: ${ total }</h3>
+          <h3>checkout: ${total}</h3>
           <p>A really nice candle.</p>
         </section>
         <section>
           <div>
-            <img alt="candle-img" src="https://i.imgur.com/3iF33Tn.png"/>
+            <img alt='candle-img' src='https://i.imgur.com/3iF33Tn.png' />
           </div>
           <aside>
             <div>
-              <button onClick={ removeIncrementFromCart }>
-                -
-              </button>
-              <span>
-                { quantity }
-              </span>
-              <button onClick={ addIncrementToCart }>
-                +
-              </button>
+              <button onClick={removeIncrementFromCart}>-</button>
+              <span>{quantity}</span>
+              <button onClick={addIncrementToCart}>+</button>
             </div>
             <div>
-              <button onClick={ setToggle }>
-                continue
-              </button>
-              <button onClick={ emptyItemsInCart }>
-                remove
-              </button>
+              <button onClick={setToggle}>continue</button>
+              <button onClick={emptyItemsInCart}>remove</button>
             </div>
           </aside>
         </section>
       </main>
-      {
-        toggle
-        ? <div className="disableBackground" />
-        : <div />
-      }
-      {
-        toggle
-        ? <ContinueModal setToggle={ setToggle }/>
-        : <div />
-      }
+      {toggle ? <div className='disableBackground' /> : <div />}
+      {toggle ? <ContinueModal setToggle={setToggle} /> : <div />}
     </StyledShoppingCart>
   )
 }

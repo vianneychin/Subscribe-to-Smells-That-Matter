@@ -9,52 +9,54 @@ export const StyledRegister = styled.div`
     > div {
       width: 700px;
       > h3 {
-          font-weight: 300;
-        a, a:visited {
-            color: green;
+        font-weight: 300;
+        a,
+        a:visited {
+          color: green;
         }
       }
-      > h1, h3 {
+      > h1,
+      h3 {
         align-self: flex-start;
       }
     }
   }
   > form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
     > input {
-        width: 700px;
-        font-size: 15px;
-        line-height: 3;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        border: .5px solid #bdbdbd;
-        padding: 10px 11px 11px 11px;
-        box-shadow: none;
-        outline: none;
+      width: 700px;
+      font-size: 15px;
+      line-height: 3;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      border: 0.5px solid #bdbdbd;
+      padding: 10px 11px 11px 11px;
+      box-shadow: none;
+      outline: none;
     }
     > label {
-        align-self: flex-start;
-        padding-bottom: 5px;
-        padding-top: 20px;
-        color: rgb(100, 100, 100);
+      align-self: flex-start;
+      padding-bottom: 5px;
+      padding-top: 20px;
+      color: rgb(100, 100, 100);
     }
     > button {
-        width: 250px;
-        line-height: 50px;
-        border-radius: 25px;
-        margin-top: 2em;
-        background-color: black;
-        color: #FFF;
-        border: none;
-        font-size: 20px;
-        margin-bottom: 5em;
+      width: 250px;
+      line-height: 50px;
+      border-radius: 25px;
+      margin-top: 2em;
+      background-color: black;
+      color: #fff;
+      border: none;
+      font-size: 20px;
+      margin-bottom: 5em;
     }
   }
   @media (max-width: 640px) {
@@ -62,30 +64,30 @@ export const StyledRegister = styled.div`
     padding-top: 5em;
     height: 100vh;
     > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
       > div {
-          width: 100%;
-          padding-top: 1em;
-          padding-bottom: 5em;
-          padding-left: 1em;
+        width: 100%;
+        padding-top: 1em;
+        padding-bottom: 5em;
+        padding-left: 1em;
       }
     }
     > form {
-        width: 100%;
+      width: 100%;
       > label {
-          display: none;
+        display: none;
       }
       > input {
-          width: 90%;
-          max-width: 400px;
+        width: 90%;
+        max-width: 400px;
       }
-      > input:nth-child(n+2) {
-          margin-bottom: 2em;
+      > input:nth-child(n + 2) {
+        margin-bottom: 2em;
       }
     }
   }

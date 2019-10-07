@@ -8,5 +8,5 @@ export const StyledYourSubscription = styled.div`
   > div {
     color: black;
     margin-bottom: 5em;
- }
+  }
 `

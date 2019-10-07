@@ -10,43 +10,39 @@ import ShoppingCart from './Components/ShoppingCart/ShoppingCart'
 import YourSubscription from './Components/YourSubscription/YourSubscription'
 import './global.css'
 
-/* HOOK */
 import useShoppingCart from './hooks/useShoppingCart'
 
 const App = () => {
-  const { addIncrementToCart, removeIncrementFromCart, emptyItemsInCart, total, quantity, emptyCart, yourCartIsEmpty, addItemToCart } = useShoppingCart()
-  const [logged, setLogged] = useState(false)
+  const {
+    addIncrementToCart,
+    removeIncrementFromCart,
+    emptyItemsInCart,
+    total,
+    quantity,
+    emptyCart,
+    yourCartIsEmpty,
+    addItemToCart
+  } = useShoppingCart()
+
+  const [logged, setLogged] = useState()
   return (
     <BrowserRouter>
       <NavBar logged={logged} />
+      <Route path='/' exact render={() => <Home />} />
+      <Route path='/about' render={() => <About />} />
       <Route
-        path="/"
-        exact render={() => <Home />}
-      />
-      <Route
-        path="/about"
-        render={() => <About />}
-      />
-      <Route
-        path="/register"
+        path='/register'
         render={() => <Register setLogged={setLogged} />}
       />
+      <Route path='/login' render={() => <Login setLogged={setLogged} />} />
       <Route
-        path="/login"
-        render={() => <Login setLogged={setLogged} />}
+        path='/store'
+        render={() => <Store addItemToCart={addItemToCart} />}
       />
       <Route
-        path="/store"
-        render={
-          () => <Store
-            addItemToCart={addItemToCart}
-          />
-        }
-      />
-      <Route
-        path="/cart"
-        render={
-          () => <ShoppingCart
+        path='/cart'
+        render={() => (
+          <ShoppingCart
             addIncrementToCart={addIncrementToCart}
             removeIncrementFromCart={removeIncrementFromCart}
             emptyItemsInCart={emptyItemsInCart}
@@ -55,14 +51,9 @@ const App = () => {
             emptyCart={emptyCart}
             yourCartIsEmpty={yourCartIsEmpty}
           />
-        }
+        )}
       />
-      <Route
-        path="/subscribed"
-        render={
-          () => <YourSubscription/>
-        }
-      />
+      <Route path='/subscribed' render={() => <YourSubscription />} />
     </BrowserRouter>
   )
 }

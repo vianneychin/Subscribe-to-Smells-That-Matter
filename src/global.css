@@ -6,7 +6,8 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
   color: white;
 }
@@ -19,8 +20,9 @@ button:hover {
   outline: 0;
 }
 button:focus {
-  outline:0;
+  outline: 0;
 }
 button {
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.5), 0 15px 40px rgba(166, 173, 201, 0.2);
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.5),
+    0 15px 40px rgba(166, 173, 201, 0.2);
 }

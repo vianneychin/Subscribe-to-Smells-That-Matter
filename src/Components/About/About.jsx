@@ -15,16 +15,12 @@ const StyledAbout = styled.div`
 const About = () => {
   return (
     <StyledAbout>
-      <p>
-        We have one candle.
-      </p>
+      <p>We have one candle.</p>
       <br />
       <br />
       <br />
       <br />
-      <p>
-        The candle is from Baxter of California.
-      </p>
+      <p>The candle is from Baxter of California.</p>
     </StyledAbout>
   )
 }
